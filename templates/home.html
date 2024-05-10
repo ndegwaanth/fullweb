@@ -26,14 +26,25 @@
         #but{
             text-align: center;
         }
+        #newimg{
+            height: 328px;
+            width: 650px;
+        }
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
     <div class="container">
-    <h1 class="mt-2 mb-4">{{ company_name }} Website</h1>
     <img class="mt-2 mb-4" src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-    <h1 class="newh1">About Anthony</h1>
-    <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h1 class="mt-2 mb-4">{{ company_name }} Website</h1>
+    <div class="row">
+        <div class="col-6" style="margin-bottom: 16px;">
+            <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="col-6">
+            <img id="newimg" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt="no image">
+        </div>
+    </div>
     <h1 class="mt-2 mb-4">Open Position</h1>
     <p>
         {% for p in jobs %}
@@ -45,7 +56,7 @@
         <button class="btn btn-primary btn-lg">Contact us</button>
         <p class="mt-4">Copyright 2024, Anthony</p>
     </div>
-    
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
